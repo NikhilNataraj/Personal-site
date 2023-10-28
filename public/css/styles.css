@@ -1,0 +1,218 @@
+html {
+    min-height: 100%;
+    position: relative;
+  }
+
+body{
+  background-color: #f5f5f5;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.heading{
+  font-family: "IBM Plex Sans";
+  padding-top: 3%;
+  margin-left: 6%;
+}
+
+/********* NAVBAR **********/
+.navbar {
+    background-color: #e9e9e9 ;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+}
+
+.navbar a {
+  color: #777;
+}
+
+/********* HOME PAGE **********/
+.homePage {
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    padding-top: 55px;
+}
+.homeContent{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.homePageHeading{
+  font-family: "Agbalumo";
+  font-size: 90px;
+  padding-top: 20%;
+  padding-left: 55%;
+}
+.introContent{
+  font-family: "Kay Pho Du";
+  font-size: 20px;
+  padding-left: 55%;
+}
+.profilePhoto img{
+  height: 500px;
+  width: 500px;
+}
+
+/*** SCROLL ***/
+.scroll-down-indicator {
+  position: fixed;
+  bottom: 20px;
+  right: 1%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+  color: #777; /* Text color */
+  cursor: pointer;
+}
+
+
+.arrow-down {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #777; /* Arrow color */
+  border-radius: 50%;
+  margin-top: 10px;
+  position: relative;
+}
+
+.arrow-down::after {
+  content: '';
+  position: absolute;
+  top: 10px; /* Adjust the position for proper alignment */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 10px 10px 0 10px; /* Increase the size of the arrow */
+  border-style: solid;
+  border-color: #777 transparent transparent transparent; /* Arrow color */
+}
+
+/*** SKILLS DIV ***/
+.skills {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80vh;
+}
+
+/*## SKILL CARD ##*/
+.card {
+  width: 300px;
+  height: 340px;
+  background-color: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-image {
+  max-width: 100%; /* Ensure the image stays within the card */
+  max-height: 60%; /* Adjust the maximum height as needed */
+  object-fit: cover;
+}
+
+.card-title {
+  margin: 10px 0;
+}
+
+.card-description {
+  display: none;
+}
+
+.card:hover {
+  transform: scale(1.5);
+  background-color: #96e6e6;
+  border: 1px solid #cccccc;
+}
+
+
+/********* ABOUT PAGE **********/
+/* Set the carousel height to 80% of the viewport height */
+#myCarousel .slide{
+  height: 100%;
+}
+
+/* Set the images inside the carousel to cover 100% of the carousel height and maintain aspect ratio */
+#myCarousel .carousel-inner .carousel-item img {
+  height: auto;
+  width: auto;
+  object-fit: fill;
+}
+
+/* Center the carousel captions */
+#myCarousel .carousel-caption {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20%;
+  right: 20%;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5); /* Background color for captions */
+  color: #fff; /* Text color for captions */
+  padding: 15px;
+}
+
+.carousel-caption h3{
+  padding-bottom: 3px;
+}
+.carousel-caption h6{
+  padding-bottom: 10px;
+}
+
+.carousel-caption p{
+  text-align: justify;
+}
+
+/********* CONTACT PAGE **********/
+.contactPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.contactPage h1 {
+  margin: 0;
+}
+
+.contactMethod {
+  padding-top: 80px;
+}
+  
+/********* FOOTER **********/
+
+.footer-padding {
+	padding-bottom: 60px;
+}
+
+.footer {
+	position: absolute;
+	text-align: center;
+	bottom: 0;
+	width: 100%;
+	height: 60px;
+	background-color: #1abc9c;
+}
+
+.footer a{
+  text-decoration: underline;
+}
