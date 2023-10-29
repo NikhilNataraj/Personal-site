@@ -3,5 +3,59 @@
     <p>© <%=currentYear%> <a href="/">Nikhil Natarajan</a></p>
   </div>
 </div>
+
+<script>
+  // CARD
+  const cards = document.querySelectorAll('.card');
+
+    cards.forEach(card => {
+        // const image = card.querySelector('.card-image');
+        const description = card.querySelector('.card-description');
+
+        card.addEventListener('mouseenter', () => {
+            description.style.display = 'block';
+        });
+
+        card.addEventListener('mouseleave', () => {
+            description.style.display = 'none';
+        });
+    });
+
+  // Scroll to the next div when arrow is clicked
+    const scrollToSkills = document.getElementById('scrollToSkills');
+    const skillsDiv = document.getElementById('skills');
+
+    scrollToSkills.addEventListener('click', () => {
+        skillsDiv.scrollIntoView({ behavior: 'smooth' });
+    }); 
+
+  // CAROUSEL
+  $(document).ready(function () {
+      // Activate the carousel
+      $('#myCarousel').carousel();
+  });
+
+  // NAVBAR
+    let previousScroll = 0;
+    let headerOrgOffset = $('#header').height();
+
+    $('#header-wrap').height($('#header').height());
+
+    $(window).scroll(function () {
+        var currentScroll = $(this).scrollTop();
+        if (currentScroll > headerOrgOffset) {
+            if (currentScroll > previousScroll) {
+                $('#header-wrap').slideUp();
+            } else {
+                $('#header-wrap').slideDown();
+            }
+        } else {
+                $('#header-wrap').slideDown();
+        }
+        previousScroll = currentScroll;
+    });
+
+</script>
+
 </body>
 </html>

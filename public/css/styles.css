@@ -4,7 +4,11 @@ html {
   }
 
 body{
-  background-color: #f5f5f5;
+  background-color: #e7e4e4;
+}
+
+button {
+  color: #e7e4e4;
 }
 
 a {
@@ -24,27 +28,48 @@ ul {
 }
 
 /********* NAVBAR **********/
+#header {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+#header-wrap {
+  width: 100%;
+  position: fixed;
+  background-color: #e0e0e0;
+}
+
 .navbar {
-    background-color: #e9e9e9 ;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    border: 0;
-    border-radius: 0;
-    margin-bottom: 0;
-    font-size: 12px;
-    letter-spacing: 5px;
+  background-color: #e9e9e9;
+  padding: 15px 0;
+  border: 0;
+  border-radius: 0;
+  margin-bottom: 0;
+  font-size: 12px;
+  letter-spacing: 5px;
 }
 
 .navbar a {
   color: #777;
 }
 
+#navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+
 /********* HOME PAGE **********/
 .homePage {
     display: flex;
     justify-content: space-around;
-    height: 100%;
-    padding-top: 55px;
+    height: 100vh;
+    padding-top: 120px;
 }
 .homeContent{
   display: flex;
@@ -146,41 +171,72 @@ ul {
 
 
 /********* ABOUT PAGE **********/
-/* Set the carousel height to 80% of the viewport height */
-#myCarousel .slide{
-  height: 100%;
+/* Set a maximum height for the carousel, e.g., 75% of the viewport height */
+#myCarousel {
+  max-height: 80vh; /* Adjust this value as needed */
+  margin: 0 auto; /* Center the carousel horizontally */
+  overflow: hidden; /* Hide overflow content */
+}
+
+.carousel-item {
+  height: 500px; /* Adjust the height to your preference */
 }
 
 /* Set the images inside the carousel to cover 100% of the carousel height and maintain aspect ratio */
 #myCarousel .carousel-inner .carousel-item img {
-  height: auto;
   width: auto;
-  object-fit: fill;
+  object-fit: cover;
 }
 
 /* Center the carousel captions */
 #myCarousel .carousel-caption {
+  font-family: "Kay Pho Du";
   position: absolute;
-  top: 50%;
+  top: 45%;
   transform: translateY(-50%);
-  left: 20%;
-  right: 20%;
+  left: 1%;
+  right: 1%;
   text-align: center;
-  background: rgba(0, 0, 0, 0.5); /* Background color for captions */
-  color: #fff; /* Text color for captions */
-  padding: 15px;
+  background: rgba(37, 37, 37, 0.8); /* Background color for captions */
+  color: rgb(255, 255, 255); /* Text color for captions */
+  padding: 15%;
+  width: 98%;
+  height: max-content;
 }
 
 .carousel-caption h3{
-  padding-bottom: 3px;
+  padding: 2%;
+  font-weight: bolder;
+  font-size: 30px;
 }
 .carousel-caption h6{
   padding-bottom: 10px;
+  font-weight: bolder;
+  font-size: 18px;
 }
 
 .carousel-caption p{
   text-align: justify;
+  font-size: 20px;
 }
+
+/* Style the carousel indicators */
+.carousel-indicators li {
+  background-color: #87b8ec; /* Set a background color for the indicators */
+  border: 1px solid #87b8ec; /* Add a border to the indicators */
+  margin: 0 3px; /* Adjust the spacing between indicators */
+  width: 10px; /* Set the width of each indicator */
+  height: 10px; /* Set the height of each indicator */
+  cursor: pointer; /* Add a pointer cursor for interactivity */
+   border-radius: 50%; /*Make the indicators circular */
+}
+
+/* Style the active indicator */
+.carousel-indicators .active {
+  background-color: #fff; /* Set a different color for the active indicator */
+  border: 1px solid #87b8ec; /* Add a border to the active indicator */
+}
+
 
 /********* CONTACT PAGE **********/
 .contactPage {
@@ -213,6 +269,10 @@ ul {
 	background-color: #1abc9c;
 }
 
+.footer p{
+  font-family: "Ubuntu";
+}
+
 .footer a{
-  text-decoration: underline;
+  border-bottom: 2px solid;
 }

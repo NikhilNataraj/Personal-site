@@ -1,4 +1,9 @@
 <%- include("partials/header"); %>
+<div id="header-wrap">
+    <div id="header">
+        <%- include("partials/navbar"); %>
+    </div>
+</div>
 
     <div class="homePage">
         <div class="homeContent">
@@ -10,7 +15,6 @@
             </div>
         </div>
         <div class="profilePhoto">
-            <!-- <img src="https://pps.whatsapp.net/v/t61.24694-24/256177322_361252729178151_6206307948984259967_n.jpg?ccb=11-4&oh=01_AdTHLnT3SveKI7ppXAKpCq6TeswP7dzpkAUqdDSr6vFF0Q&oe=65407503&_nc_sid=000000&_nc_cat=110" alt="Nikhil Natarajan"> -->
             <img src="/Profile.png" alt="Profile Image">
         </div>
     </div>  
@@ -48,32 +52,6 @@
             </div>
         </div>
     </div>
-
-
-    <script>
-        const cards = document.querySelectorAll('.card');
-
-        cards.forEach(card => {
-            // const image = card.querySelector('.card-image');
-            const description = card.querySelector('.card-description');
-
-            card.addEventListener('mouseenter', () => {
-                description.style.display = 'block';
-            });
-
-            card.addEventListener('mouseleave', () => {
-                description.style.display = 'none';
-            });
-            });
-
-        // Scroll to the next div when arrow is clicked
-        const scrollToSkills = document.getElementById('scrollToSkills');
-        const skillsDiv = document.getElementById('skills');
-
-        scrollToSkills.addEventListener('click', () => {
-            skillsDiv.scrollIntoView({ behavior: 'smooth' });
-        });
-    </script>
       
 
 <%- include("partials/footer"); %>
