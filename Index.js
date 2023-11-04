@@ -3,6 +3,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
+require('dotenv').config();
 
 const app = express();
 const port = process.env.PORT;
@@ -18,20 +19,20 @@ app.get("/", function(req, res){
     });
 });
 
-app.get("/about", function(req, res){
+app.get("/work", function(req, res){
     const d1 = new Date("2022-05-16");
     const d2 = new Date()
-    var months;
-    months = (d2.getFullYear() - d1.getFullYear()) * 12;
+    var months = (d2.getFullYear() - d1.getFullYear()) * 12;
     months -= d1.getMonth();
     months += d2.getMonth();
 
-    var years = Math.round(months / 12);
+    var years = Math.floor(months / 12);
     months = months % 12 + 1;
 
     plural_y = years>1?"s":"";
     plural_m = months>1?"s":"";
-    res.render("about", {
+
+    res.render("work", {
         currentYear: d2.getFullYear(),
         noOfYears : years,
         noOfMonths : months,

@@ -64,33 +64,33 @@ ul {
 }
 
 
-/********* HOME PAGE **********/
+/* ******** HOME PAGE ********* */
 .homePage {
-    display: flex;
-    justify-content: space-around;
-    height: 100vh;
-    padding-top: 120px;
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+  padding-top: 10%;
 }
 .homeContent{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+display: flex;
+flex-direction: column;
+align-items: center;
 }
 .homePageHeading{
-  font-family: "Agbalumo";
-  font-size: 90px;
-  padding-top: 20%;
-  padding-left: 55%;
+font-family: "Agbalumo";
+font-size: 90px;
+padding-top: 20%;
+padding-left: 55%;
 }
 .introContent{
-  font-family: "Kay Pho Du";
-  font-size: 20px;
-  padding-left: 55%;
+font-family: "Kay Pho Du";
+font-size: 20px;
+padding-left: 55%;
 }
 .profilePhoto img{
-  height: 500px;
-  width: 500px;
-}
+height: 500px;
+width: 500px;
+} 
 
 /*** SCROLL ***/
 .scroll-down-indicator {
@@ -106,15 +106,14 @@ ul {
   cursor: pointer;
 }
 
-
-.arrow-down {
-  width: 30px;
-  height: 30px;
-  border: 2px solid #777; /* Arrow color */
-  border-radius: 50%;
-  margin-top: 10px;
-  position: relative;
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
 }
+
 
 .arrow-down::after {
   content: '';
@@ -190,7 +189,8 @@ ul {
 
 /* Center the carousel captions */
 #myCarousel .carousel-caption {
-  font-family: "Kay Pho Du";
+  font-family: "Mukta";
+  font-weight: bolder;
   position: absolute;
   top: 45%;
   transform: translateY(-50%);
@@ -253,7 +253,13 @@ ul {
 .contactMethod {
   padding-top: 80px;
 }
-  
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
 /********* FOOTER **********/
 
 .footer-padding {
@@ -276,3 +282,8 @@ ul {
 .footer a{
   border-bottom: 2px solid;
 }
+
+
+/* ################################################################################################# */
+
+

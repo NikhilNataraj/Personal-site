@@ -1,0 +1,34 @@
+@media (max-width: 1035px){
+    /*** SCROLL ***/
+    .scroll-down-indicator {
+        color: black;
+    }
+}
+
+/* For screens with a maximum width of 870px (typical mobile devices) */
+@media (max-width: 870px) {
+    /* ******** HOME PAGE ********* */
+    .homePage {
+      flex-direction: column; /* Stack items vertically for smaller screens */
+      align-items: center; /* Center items vertically */
+      height: auto; /* Adjust height as needed */
+      height: 50%;
+    }
+  
+    .homePageHeading {
+      font-size: 60px; /* Reduce the font size for smaller screens */
+      padding-top: 10%; /* Adjust padding for smaller screens */
+      padding-left: 0; /* Remove left padding for smaller screens */
+      text-align: center;
+    }
+  
+    .introContent {
+      font-size: 16px; /* Reduce the font size for smaller screens */
+      padding-left: 0; /* Remove left padding for smaller screens */
+    }
+  
+    .profilePhoto img {
+      max-width: 100%; /* Ensure the image scales proportionally */
+      height: auto; /* Allow the height to adjust accordingly */
+    }
+  }
