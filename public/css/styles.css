@@ -177,13 +177,33 @@ width: 500px;
   overflow: hidden; /* Hide overflow content */
 }
 
+/* carousel background */
+.wipro {
+  background-color: rgba(19,14,37,255);
+}
+
+.mahindra {
+  background-color: rgba(2,20,32,255);
+}
+
+.zuura {
+  background-color: rgba(0,0,5,255);
+}
+
+.carousel-bg {
+  padding-right: 10%;
+  height: 100%;
+  /* width: 150%; */
+}
+/* ********* */
+
 .carousel-item {
   height: 500px; /* Adjust the height to your preference */
 }
 
 /* Set the images inside the carousel to cover 100% of the carousel height and maintain aspect ratio */
 #myCarousel .carousel-inner .carousel-item img {
-  width: auto;
+  width: 60%;
   object-fit: cover;
 }
 
@@ -194,22 +214,29 @@ width: 500px;
   position: absolute;
   top: 45%;
   transform: translateY(-50%);
-  left: 1%;
-  right: 1%;
+  left: 50%;
+  right: 10%;
   text-align: center;
-  background: rgba(37, 37, 37, 0.8); /* Background color for captions */
-  color: rgb(255, 255, 255); /* Text color for captions */
-  padding: 15%;
-  width: 98%;
+  /* background: rgba(40, 0, 80, 0.5); */ /* Background color for captions */
+  color: white; /* Text color for captions */
+  padding: 1%;
+  /* width: 98%; */
   height: max-content;
+} 
+
+.carousel-caption img {
+  height: 8rem;
+  width: 8rem;
 }
 
 .carousel-caption h3{
+  color: rgb(255, 255, 0);
   padding: 2%;
   font-weight: bolder;
   font-size: 30px;
 }
 .carousel-caption h6{
+  color: rgb(255, 255, 0);
   padding-bottom: 10px;
   font-weight: bolder;
   font-size: 18px;

@@ -6,9 +6,10 @@ const ejs = require("ejs");
 require('dotenv').config();
 
 const app = express();
-const port = process.env.PORT;
+const port = process.env.PORT || 3000;
 
 app.set('view engine', 'ejs');
+app.set('port', port);
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
@@ -48,7 +49,7 @@ app.get("/contact", function(req, res){
     });
 });
   
-// app.listen(port, function() {
-//     console.log("Server started on port "+port);
-//   });
+app.listen(port, function() {
+    console.log("Server started on port "+port);
+  });
 
