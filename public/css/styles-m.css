@@ -1,34 +1,99 @@
 @media (max-width: 1035px){
-    /*** SCROLL ***/
-    .scroll-down-indicator {
-        color: black;
-    }
+  /*** SCROLL ***/
+  .scroll-down-indicator {
+      color: black;
+  }
 }
 
-/* For screens with a maximum width of 870px (typical mobile devices) */
-@media (max-width: 870px) {
-    /* ******** HOME PAGE ********* */
-    .homePage {
-      flex-direction: column; /* Stack items vertically for smaller screens */
-      align-items: center; /* Center items vertically */
-      height: auto; /* Adjust height as needed */
-      height: 50%;
-    }
-  
-    .homePageHeading {
-      font-size: 60px; /* Reduce the font size for smaller screens */
-      padding-top: 10%; /* Adjust padding for smaller screens */
-      padding-left: 0; /* Remove left padding for smaller screens */
-      text-align: center;
-    }
-  
-    .introContent {
-      font-size: 16px; /* Reduce the font size for smaller screens */
-      padding-left: 0; /* Remove left padding for smaller screens */
-    }
-  
-    .profilePhoto img {
-      max-width: 100%; /* Ensure the image scales proportionally */
-      height: auto; /* Allow the height to adjust accordingly */
-    }
+@media (max-width: 900px) {
+  /* ******** HOME PAGE ********* */
+  .homePage {
+    flex-direction: column; /* Stack items vertically for smaller screens */
+    align-items: center; /* Center items vertically */
+    height: auto; /* Adjust height as needed */
+    height: 50%;
   }
+
+  .homePageHeading {
+    font-size: 60px; /* Reduce the font size for smaller screens */
+    padding-top: 10%; /* Adjust padding for smaller screens */
+    padding-left: 0; /* Remove left padding for smaller screens */
+    text-align: center;
+  }
+
+  .introContent {
+    font-size: 16px; /* Reduce the font size for smaller screens */
+    padding-left: 0; /* Remove left padding for smaller screens */
+  }
+
+  .profilePhoto {
+    display: flex;
+    justify-content: center;
+  }
+
+  .profilePhoto img {
+    max-width: 80%; /* Ensure the image scales proportionally */
+    height: auto; /* Allow the height to adjust accordingly */
+  }
+
+  /*** SKILLS DIV ***/
+  .skills {
+    flex-direction: column;
+    height: 200vh;
+  }
+
+  .card-image {
+    align-self: center;
+    max-width: 70%;
+    max-height: 50%; 
+  }
+
+  .card:hover {
+    transform: scale(1.2);
+  }
+
+  /********* WORK PAGE **********/
+
+  .carousel-caption h6{ 
+    font-size: 16px;
+  }
+
+  .carousel-caption p{
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 700px) {
+
+  /********* WORK PAGE **********/
+  .carousel-caption h3{
+    font-size: 20px;
+    padding: 1%;
+  }
+  .carousel-caption h6{ 
+    font-size: 10px;
+  }
+
+  .carousel-caption p{
+    text-align: left;
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 355px) {
+  /********* WORK PAGE **********/
+  .carousel-bg {
+    padding-right: 15%;
+  }
+
+  #myCarousel .carousel-caption {
+    left: 45%;
+    right: 5%;
+  }
+
+  /********* CONTACT PAGE **********/
+  .btn {
+    padding: 3px 6px;
+  }
+}

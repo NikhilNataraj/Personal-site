@@ -143,7 +143,6 @@ width: 500px;
   cursor: pointer;
   transition: transform 0.3s;
   text-align: center;
-  padding: 10px;
   position: relative;
   overflow: hidden;
 }
@@ -169,7 +168,7 @@ width: 500px;
 }
 
 
-/********* ABOUT PAGE **********/
+/********* WORK PAGE **********/
 /* Set a maximum height for the carousel, e.g., 75% of the viewport height */
 #myCarousel {
   max-height: 80vh; /* Adjust this value as needed */
@@ -193,7 +192,6 @@ width: 500px;
 .carousel-bg {
   padding-right: 10%;
   height: 100%;
-  /* width: 150%; */
 }
 /* ********* */
 
@@ -281,7 +279,7 @@ width: 500px;
   padding-top: 80px;
 }
 
-.button-container {
+.contactWays {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -312,5 +310,3 @@ width: 500px;
 
 
 /* ################################################################################################# */
-
-
