@@ -151,6 +151,7 @@ width: 500px;
   max-width: 100%; /* Ensure the image stays within the card */
   max-height: 60%; /* Adjust the maximum height as needed */
   object-fit: cover;
+  padding: 2%;
 }
 
 .card-title {
@@ -169,7 +170,6 @@ width: 500px;
 
 
 /********* WORK PAGE **********/
-/* Set a maximum height for the carousel, e.g., 75% of the viewport height */
 #myCarousel {
   max-height: 80vh; /* Adjust this value as needed */
   margin: 0 auto; /* Center the carousel horizontally */
@@ -215,10 +215,8 @@ width: 500px;
   left: 50%;
   right: 10%;
   text-align: center;
-  /* background: rgba(40, 0, 80, 0.5); */ /* Background color for captions */
   color: white; /* Text color for captions */
   padding: 1%;
-  /* width: 98%; */
   height: max-content;
 } 
 

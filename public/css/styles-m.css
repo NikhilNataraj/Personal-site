@@ -5,6 +5,20 @@
   }
 }
 
+@media (min-height: 630px) {
+  .workCarousels {
+    height: 80vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+
+  #myCarousel {
+    margin: 0;
+    width: 100%;
+  }
+}
+
 @media (max-width: 900px) {
   /* ******** HOME PAGE ********* */
   .homePage {
