@@ -10,6 +10,7 @@ const port = process.env.PORT || 9001;
 
 app.set('view engine', 'ejs');
 app.set('port', port);
+app.set('views', __dirname + '/views');
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
