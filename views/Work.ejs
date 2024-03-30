@@ -1,59 +1,51 @@
 <%- include("partials/header"); %>
 
 <%- include("partials/navbar"); %>
-    
-<div class="workCarousels">
-  <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="15000">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-  
-    <!-- Slides -->
-    <div class="carousel-inner">
-      <div class="wipro carousel-item active">
-        <img class="carousel-bg" src="/it.jfif" class="d-block w-100" alt="Wipro">
-        <div class="carousel-caption">
-          <h3>Wipro</h3>
-          <h6>May 2022 - Present (<%=noOfYears%> year<%=sy%> <%=noOfMonths%> month<%=sm%>)</h6>
-          <p>Successfully managed the creation and assignment of responsibilities for 100+ countries, thereby optimizing organizational efficiency.</p>
-          <p>Streamlined communication channels by configuring mailboxes.</p>
-          <p>Implemented robust security rules to enhance data protection.</p>
-        </div>
-      </div>
-      <div class="mahindra carousel-item">
-        <img class="carousel-bg" src="/engine.jfif" class="d-block w-100" alt="Mahindra and Mahindra">
-        <div class="carousel-caption">
-          <h3>Mahindra & Mahindra</h3>
-          <h6>Jul 2021 - Sep 2021 (3 Months)</h6>
-          <p>Collaborated with a multidisciplinary team to reduce engine acoustics and minimize vibrational forces.</p>
-          <p>Developed an innovative app using MATLAB to calculate forces, contributing to project success.</p>
-        </div>
-      </div>
-      <div class="zuura carousel-item">
-        <img class="carousel-bg" src="/Chassis.jfif" class="d-block w-100" alt="Zuura">
-        <div class="carousel-caption">
-          <h3>Zuura Formula Racing</h3>
-          <h6>Dec 2018 - Apr 2022 (3 years 5 months)</h6>
-          <p>Led a dynamic team of 10 engineers in designing the chassis for an FSAE vehicle. </p>
-          <p>Collaborated with a team of 30 engineers to manufacture an FSAE vehicle, achieving exceptional results.</p>
-          <p>Represented the only Indian team in the FSAE Australasia competition, securing a special award from the judges.</p>
-        </div>
+
+<main>
+  <div class="container py-4">
+    <div class="p-5 mb-4 bg-light rounded-3">
+      <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">Wipro</h1>
+        <h6>May 2022 - Present (<%=noOfYears%> year<%=sy%> <%=noOfMonths%> month<%=sm%>)</h6>
+        <p class="col-md-15 fs-4">
+          Collaborated with a multidisciplinary team to reduce engine acoustics and minimize vibrational forces.
+      </p>
+        <p class="col-md-15 fs-4">
+          Streamlined communication channels by configuring mailboxes.
+        </p>
+        <p class="col-md-15 fs-4">
+          Implemented robust security rules to enhance data protection.
+        </p>
       </div>
     </div>
-  
-    <!-- Controls -->
-    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
-</div>
-  
+    <div class="p-5 mb-4 bg-light rounded-3">
+      <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">Mahindra & Mahindra</h1>
+        <h6>Jul 2021 - Sep 2021 (3 Months)</h6>
+        <p class="col-md-15 fs-4">
+        Successfully managed the creation and assignment of responsibilities for 100+ countries, thereby optimizing organizational efficiency.
+      </p>
+        <p class="col-md-15 fs-4">
+          Developed an innovative app using MATLAB to calculate forces, contributing to project success..
+        </p>
+      </div>
+    </div>
+    <div class="p-5 mb-4 bg-light rounded-3">
+      <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">Zuura Formula Racing</h1>
+        <h6>Dec 2018 - Apr 2022 (3 years 5 months)</h6>
+        <p class="col-md-15 fs-4">
+          Led a dynamic team of 10 engineers in designing the chassis for an FSAE vehicle. 
+      </p>
+        <p class="col-md-15 fs-4">
+          Collaborated with a team of 30 engineers to manufacture an FSAE vehicle, achieving exceptional results.
+        </p>
+        <p class="col-md-15 fs-4">
+          Represented the only Indian team in the FSAE Australasia competition, securing a special award from the judges.
+        </p>
+      </div>
+    </div>
+</main>
+
 <%- include("partials/footer"); %>
