@@ -33,7 +33,7 @@ app.get("/work", function(req, res){
     months += d2.getMonth();
 
     const years = Math.floor(months / 12);
-    months = months % 12 + 1;
+    months = months % 12;
 
     const plural_y = years > 1 ? "s" : "";
     const plural_m = months > 1 ? "s" : "";
