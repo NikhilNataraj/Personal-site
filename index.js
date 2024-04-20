@@ -13,7 +13,7 @@ app.set('port', port);
 app.set('views', __dirname + '/views');
 
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(express.static("public"));
+app.use(express.static(__dirname + "/public/"));
 
 function getCurrentYear() {
     return new Date().getFullYear();
