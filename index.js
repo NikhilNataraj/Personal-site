@@ -4,6 +4,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 require('dotenv').config();
+const nodemailer = require('nodemailer');
 
 const app = express();
 const port = process.env.PORT || 9001;
@@ -13,6 +14,7 @@ app.set('port', port);
 app.set('views', __dirname + '/views');
 
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
 app.use(express.static(__dirname + "/public/"));
 
 function getCurrentYear() {
@@ -54,6 +56,38 @@ app.get("/contact", function(req, res){
     });
 });
   
+app.post('/send-email', function(req, res) {
+    const { email, message } = req.body;
+
+    // Create a nodemailer transporter
+    const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+            user: process.env.EMAIL,
+            pass: process.env.PASSWORD
+        }
+    });
+
+    // Email message options
+    const mailOptions = {
+        from: process.env.EMAIL,
+        to: process.env.EMAIL,
+        subject: 'New Contact Form Submission',
+        text: `You have received a new message from your contact form.\n\nEmail: ${email}\nMessage:\n${message}`
+    };
+
+    // Send email
+    transporter.sendMail(mailOptions, (error, info) => {
+        console.log("Sending mail...");
+        if (error) {
+            console.error(error);
+        } else {
+            console.log('Email sent: ' + info.response);
+            console.log('Email sent successfully');
+        }
+        res.redirect("/contact");
+    });
+});
 
 app.use((err, req, res, next) => {
     console.error(`Error: ${err.message}`);

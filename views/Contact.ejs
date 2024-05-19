@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="/css/styles.css">
   <link rel="stylesheet" href="/css/styles-m.css">
   <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/jumbotron/">
+  <link href="https://getbootstrap.com/docs/5.2/examples/sign-in/signin.csssignin.css" rel="stylesheet">
 </head>  
 
 <body>
@@ -39,23 +40,37 @@
         <div class="contactHeading">
             <h1 class="heading">Contact Me</h1> 
         </div>
+    </div>
+
+        <!-- FORM -->
+    <div class="contactPage">
+        <main class="form-signin w-50 m-auto">
+            <form id="contactForm" action="/send-email" method="post">
+              <div class="form-floating w-100 mb-3">
+                <input type="email" name="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Email address</label>
+              </div>
+              <div class="form-floating w-100 mb-3">
+                <textarea id="freeform" name="message" rows="5" cols="66" style="height: 150px; width: 100%;" class="form-control rounded-corners"></textarea>
+                <label for="freeform">Your message</label>
+              </div>
+
+              <button class="btn btn-lg btn-light" type="submit">Send</button>
+            </form>
+          </main>
+    </div>
+
+
+          <!-- CONTACT BUTTONS -->      
+    <div class="contactPage">
         <div class="contactWays">
-            
-            <ul class="contactMethod">
-                <button type="button" class="btn btn-light" href="mailto:nikhil.nataraj@gmail.com">
-                    <a href="mailto:nikhil.nataraj@gmail.com"><i class="material-icons" style="font-size:48px">mail</i></a>
-                </button>
-                <button type="button" class="btn">
-                    <h6><a href="mailto:nikhil.nataraj@gmail.com">You can contact me via Email</a></h6>
-                </button>
-            </ul>            
             <ul>
-                <button type="button" class="btn btn-light">
+                <button type="button" class="btn" style="background-color: transparent; padding: 0;">
                     <a href="https://www.linkedin.com/in/nikhil-natarajan/" >
-                        <i class="fa fa-linkedin-square" style="font-size:60px;color:purple"></i></a>
+                        <i class="fa fa-linkedin-square" style="font-size:45px;color:purple"></i></a>
                 </button>  
                 <button type="button" class="btn">
-                    <a href="https://www.linkedin.com/in/nikhil-natarajan/" ><h6>Connect with me on LinkedIn</h6></a>
+                    <a href="https://www.linkedin.com/in/nikhil-natarajan/" ><h6>Click here to visit my LinkedIn profile</h6></a>
                 </button>         
             </ul>
         </div>          
