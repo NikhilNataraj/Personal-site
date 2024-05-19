@@ -38,7 +38,7 @@ app.get("/work", function(req, res){
     months = months % 12;
 
     const plural_y = years > 1 ? "s" : "";
-    const plural_m = months > 1 ? "s" : "";
+    const plural_m = months != 1 ? "s" : "";
 
     res.render("Work", {
         currentYear: d2.getFullYear(),
